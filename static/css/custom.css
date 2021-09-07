@@ -1,6 +1,10 @@
 pre {
     background: unset; /* new.css messes this up for pygments */
 }
+tt {
+
+border: 1px solid var(--nc-bg-3);
+}
 div.figure {
     text-align:center;
     margin: 1em;
