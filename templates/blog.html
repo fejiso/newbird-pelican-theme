@@ -5,7 +5,7 @@
 
   {% for article in articles %}
     {% if article.status != 'draft' %}
-    <h5>{{ article.date|strftime('%b %Y') }} // <a href="/{{ article.url }}" title="{{ article.title }}">{{ article.title }}</a></h5>
+    <h5>{{ article.date|strftime('%b %Y') }} // <a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.title }}">{{ article.title }}</a></h5>
     {% endif %}
   {% endfor %}
 
