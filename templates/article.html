@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}{{ article.title }}{% endblock %}
+{% block title %}{{ article.title | striptags | safe }}{% endblock %}
 {% block metadesc %}{{ article.description|e }}{% endblock %}
 
 {% block header %}
@@ -19,7 +19,7 @@
 	<!-- Facebook Open Graph
   ================================================== -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ article.title }}">
+  <meta property="og:title" content="{{ article.title | striptags | safe }}">
   <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}">
   <meta property="og:description" content="{{ article.description|e }}">
   <meta property="og:site_name" content="{{ SITENAME }}">
@@ -32,7 +32,7 @@
   <meta name="twitter:creator" content="@{{ TWITTER_NAME }}">
   <meta name="twitter:domain" content="{{ DOMAIN }}">
   <meta name="twitter:image" content="{{ SITEURL }}{{ LOGO_IMAGE }}">
-  <meta name="twitter:title" content="{{ article.title }}">
+  <meta name="twitter:title" content="{{ article.title | striptags | safe }}">
   <meta name="twitter:description" content="{{ article.description|e }}">
 {% endblock %}
 

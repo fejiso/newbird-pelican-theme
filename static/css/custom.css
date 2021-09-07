@@ -1,0 +1,19 @@
+div.figure {
+    text-align:center;
+    margin: 1em;
+}
+
+div.figure img{
+    max-width:100%;
+    width: unset;
+    box-shadow: 1px 2px 3px;
+}
+
+div.figure p.caption{
+    color:grey;
+    font-size:.6em;
+    margin:0}
+
+div.figure p.caption a{
+    border:none;color:grey
+}
