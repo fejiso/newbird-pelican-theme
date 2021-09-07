@@ -1,3 +1,6 @@
+pre {
+    background: usnet; /* new.css messes this up for pygments */
+}
 div.figure {
     text-align:center;
     margin: 1em;
